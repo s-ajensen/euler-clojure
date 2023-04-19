@@ -20,6 +20,9 @@
     (should= 10 (euler-2 10)))
 
   (it "should return the sum of the even fib numbers < 50"
-    (should= 44 (euler-2 50))))
+    (should= 44 (euler-2 50)))
+
+  (it "Solves #2"
+    (should= 4613732 (euler-2 4000000))))
 
 (run-specs)
