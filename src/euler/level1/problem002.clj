@@ -5,4 +5,4 @@
   ([n m] (filter even? (lazy-seq (cons n (even-fib m (+' n m)))))))
 
 (defn euler-2 [n]
-  10)
+  (reduce + (take-while #(> n %) (even-fib))))
