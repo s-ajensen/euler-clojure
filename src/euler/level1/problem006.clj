@@ -1,11 +1,6 @@
-(ns euler.level1.problem006)
-
-(defn square [n]
-  (*' n n))
-
-(defn squares
-  ([] (squares 1))
-  ([n] (lazy-seq (cons (+' (square n)) (squares (inc n))))))
+(ns euler.level1.problem006
+  (:use
+    [euler.math]))
 
 (defn sum-squares [n]
   (reduce +' (take n (squares))))
